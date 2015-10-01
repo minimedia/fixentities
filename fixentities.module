@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function fixentities_init() {
+  if (preg_match('/^\/node\/add$/', $_SERVER['REQUEST_URI'])
+      || preg_match('/^\/node\/(\d*)\/edit$/', $_SERVER['REQUEST_URI'])
+  ) {
+    drupal_set_message('adding ckeditor fix js');
+    // Add ckeditor fix
+    drupal_add_js(drupal_get_path('module','fixentities').'/fixentities.js',array('type'=>'file','scope'=>'footer'));
+  }
+}

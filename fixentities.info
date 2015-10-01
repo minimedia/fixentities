@@ -1,0 +1,6 @@
+name = fixentities
+description = Cleans up pasted text removing non-breaking space
+core = 7.x
+version = 7.x-1.13
+project = "fixentities"
+project status url = "http://features.minimedia.se/fserver"
